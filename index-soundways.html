@@ -151,11 +151,20 @@
   .band p{color:rgba(243,238,228,.82);font-size:19px;font-weight:300}
 
   /* EXPERIENCE */
-  .exp{display:grid;grid-template-columns:repeat(3,1fr);gap:52px}
-  .exp .item{text-align:center}
-  .exp .num{font-family:'Cormorant Garamond',serif;font-size:60px;color:var(--amber);opacity:.6;margin-bottom:12px;font-style:italic}
-  .exp h3{font-size:26px;font-weight:500;margin-bottom:10px;color:var(--ink)}
+  .exp{display:grid;grid-template-columns:repeat(4,1fr);gap:34px}
+  .exp .item{position:relative;padding-top:22px}
+  .exp .item::before{content:"";position:absolute;top:0;left:0;width:40px;height:1px;background:linear-gradient(90deg,var(--amber),transparent)}
+  .exp .num{font-family:'Cormorant Garamond',serif;font-size:52px;color:var(--amber);opacity:.55;margin-bottom:10px;font-style:italic;line-height:1}
+  .exp h3{font-size:24px;font-weight:500;margin-bottom:10px;color:var(--ink)}
   .exp p{font-size:15px;font-weight:300}
+  .where{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:840px;margin:70px auto 0}
+  .where .loc{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:34px 30px;
+    transition:transform .5s,border-color .5s}
+  .where .loc:hover{transform:translateY(-6px);border-color:rgba(232,162,74,.4)}
+  .where .loc .ic{width:40px;height:40px;color:var(--amber);margin-bottom:16px}
+  .where .loc h3{font-size:24px;font-weight:500;color:var(--ink);margin-bottom:8px}
+  .where .loc p{font-size:15px;font-weight:300}
+  .where .loc .tag{display:inline-block;margin-top:14px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);border:1px solid rgba(232,162,74,.35);border-radius:999px;padding:5px 13px}
 
   /* TESTIMONIALS */
   .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
@@ -186,8 +195,8 @@
   .reveal{opacity:0;transform:translateY(50px)}
 
   @media(max-width:900px){
-    .split,.mods,.exp,.tgrid,.sci-grid{grid-template-columns:1fr;gap:34px}
-    .sci-grid{grid-template-columns:1fr 1fr}
+    .split,.mods,.exp,.tgrid,.sci-grid,.where{grid-template-columns:1fr;gap:34px}
+    .sci-grid,.exp{grid-template-columns:1fr 1fr}
     .nav-links{display:none}.menu-btn{display:block}
     .nav-links.open{display:flex;position:absolute;top:88px;left:0;right:0;flex-direction:column;background:rgba(8,11,22,.97);padding:24px 30px;gap:18px}
     section{padding:86px 0}.band{height:80vh}.tcard .vid{max-height:none}
@@ -288,8 +297,8 @@
     <div class="wrap">
       <div class="sec-head reveal"><span class="kicker">Healing Modalities</span><h2>Ways to be guided inward</h2><p>Each session is individualized — Shri Vivek reads what you need and shapes the sound journey to meet it.</p></div>
       <div class="mods">
-        <article class="mod reveal" data-glow><div class="n">01</div><h3>Trauma &amp; Anxiety Release</h3><p>Awareness + Emotion = Transformation. This modality is designed to help resolve anxiety, PTSD, deep-seated fears and trauma, often within 1–3 targeted sessions.</p></article>
-        <article class="mod reveal" data-glow><div class="n">02</div><h3>Mind Clearing · 32-Point Activation</h3><p>Activate 32 points on the head to release the stored electromagnetic charge of thoughts, fixed beliefs and emotions that may be limiting your potential.</p></article>
+        <article class="mod reveal" data-glow><div class="n">01</div><h3>Compassion Key · Trauma &amp; Anxiety Release</h3><p>Awareness + Emotion = Transformation. Using the Compassion Key method, this modality is designed to help resolve anxiety, PTSD, deep-seated fears and trauma, often within 1–3 targeted sessions.</p></article>
+        <article class="mod reveal" data-glow><div class="n">02</div><h3>Access Bars · 32-Point Activation</h3><p>A gentle Access Bars session activates 32 points on the head to release the stored electromagnetic charge of thoughts, fixed beliefs and emotions that may be limiting your potential.</p></article>
         <article class="mod reveal" data-glow><div class="n">03</div><h3>Cellular Frequency Therapy</h3><p>Apply therapeutic frequencies directly to the body at a cellular level, helping align your inner vibration for deep physical and mental healing.</p></article>
         <article class="mod reveal" data-glow><div class="n">04</div><h3>Focus &amp; ADHD Support</h3><p>Anchor the shifting mind in steady frequencies that calm the nervous system and centre focus.</p></article>
         <article class="mod reveal" data-glow><div class="n">05</div><h3>Cognitive Flow</h3><p>Optimize your cognitive flow and access the silence where true creative genius and focus reside.</p></article>
@@ -317,11 +326,26 @@
   <!-- EXPERIENCE -->
   <section id="experience">
     <div class="wrap">
-      <div class="sec-head reveal"><span class="kicker">What to expect</span><h2>Your experience</h2></div>
+      <div class="sec-head reveal"><span class="kicker">The Ritual</span><h2>Your journey into Nishabdhaa</h2><p>More than a session — a guided passage out of the noise of the world and into the profound silence within. Each journey unfolds in four movements.</p></div>
       <div class="exp">
-        <div class="item reveal"><div class="num">i</div><h3>Arrive &amp; settle</h3><p>Find a comfortable place to lie down at our Mississauga sanctuary. There's nothing to prepare — just let yourself land.</p></div>
-        <div class="item reveal"><div class="num">ii</div><h3>Drift with the sound</h3><p>Waves of tone from bowls and gong wash over you. Your only task is to listen and let go.</p></div>
-        <div class="item reveal"><div class="num">iii</div><h3>Return gently</h3><p>Come back slowly, carrying the calm of Nishabdhaa with you into the rest of your day.</p></div>
+        <div class="item reveal"><div class="num">i</div><h3>The Threshold</h3><p>You cross out of ordinary time. Shoes off, breath softening, the space held in candlelight and the warm glow of Himalayan salt. Nothing is asked of you but to arrive.</p></div>
+        <div class="item reveal"><div class="num">ii</div><h3>Attunement</h3><p>Shri Vivek reads your energy and tunes the session to you — choosing the bowls, gongs and frequencies your body is asking for. The first tones begin to loosen the grip of the mind.</p></div>
+        <div class="item reveal"><div class="num">iii</div><h3>The Sound Journey</h3><p>Waves of platinum-infused bowls, the deep swell of the gong and binaural beats carry you beneath thought — into stillness, into Nishabdhaa, where the body's own intelligence takes over and healing begins.</p></div>
+        <div class="item reveal"><div class="num">iv</div><h3>The Return</h3><p>You surface slowly, wrapped in quiet. A sip of water, a few grounding words, and the calm — with its clarity — is yours to carry back into the world.</p></div>
+      </div>
+      <div class="where">
+        <div class="loc reveal">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 21v-6h6v6"/></svg>
+          <h3>In your own home</h3>
+          <p>Shri Vivek brings the full practice — bowls, gong and sacred space — to you. Receive deep sound healing in the comfort and safety of your own surroundings.</p>
+          <span class="tag">Home visit</span>
+        </div>
+        <div class="loc reveal">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>
+          <h3>Our Mississauga home studio</h3>
+          <p>Step into a dedicated healing sanctuary — a space held in silence, candlelight and resonance, built for the journey into Nishabdhaa.</p>
+          <span class="tag">Mississauga · by appointment</span>
+        </div>
       </div>
     </div>
   </section>
@@ -345,7 +369,7 @@
         <span class="kicker">Begin your healing journey</span>
         <h2>Step into the silence</h2>
         <p>Experience the ancient science of vibration. Shri Vivek invites you to a space of profound transformation and deep states of silence.</p>
-        <p class="studio"><strong>In-person sessions</strong> at our Mississauga studio · Healing Sanctuary Hours by appointment</p>
+        <p class="studio"><strong>In-person sessions</strong> — in your own home, or at our Mississauga home studio · by appointment</p>
         <a class="btn btn-amber" data-mag href="#">Book a session</a>
       </div>
     </div>
